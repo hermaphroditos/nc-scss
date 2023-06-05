@@ -1,0 +1,32 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_buttons.scss";
+
+body {
+  background: $bg;
+  div {
+    a {
+      @include responsive {
+        color: rgb(65, 65, 138);
+      }
+      // @extend %button;
+    }
+    button {
+      @extend %button;
+    }
+  }
+  // a {
+  //   color: rgb(65, 65, 138);
+  // }
+}
+
+// a{
+//   @include link();
+//   &:nth-child(odd){
+//     @include link(rgb(2, 2, 61));
+//   }
+//   &:nth-child(even){
+//     @include link-word('even');
+//   }
+// }
+

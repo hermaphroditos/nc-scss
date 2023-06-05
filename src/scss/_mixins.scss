@@ -1,0 +1,38 @@
+@mixin link($color: rgb(65, 65, 138)) {
+  text-decoration: none;
+  color: $color;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+@mixin link-word($word) {
+  @if $word == 'odd' {
+    color: rgb(2, 2, 61);
+  } @else if $word == 'even' {
+    color: rgb(19, 0, 146);
+  } @else {
+    color: rgb(65, 65, 138);
+  }
+}
+
+@mixin responsive($device: 'mobile') {
+  @if $device == 'iphone' {
+    @media screen and (max-width: 690px) and (min-width: 500px) {
+      @content;
+    }
+  } @else if $device == 'tablet' {
+    @media screen and (max-width: 1920px) and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $device == 'desktop' {
+    @media screen and (max-width: 1920px) and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $device == 'mobile' {
+    @media screen and (max-width: 600px) and (min-width: 320px) {
+      @content;
+    }
+  }
+}
